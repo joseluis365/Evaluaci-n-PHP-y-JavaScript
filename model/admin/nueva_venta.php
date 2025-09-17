@@ -89,7 +89,7 @@
         formVenta.addEventListener('submit', async function(event) {
             event.preventDefault();
             const formData = new FormData();
-            formData.append('id_material', document.getElementById('id_vendedor').value);
+            formData.append('id_vendedor', document.getElementById('id_vendedor').value);
             formData.append('id_comprador', document.getElementById('id_comprador').value);
             formData.append('id_material', document.getElementById('id_material').value);
             formData.append('valor', document.getElementById('valor').value);

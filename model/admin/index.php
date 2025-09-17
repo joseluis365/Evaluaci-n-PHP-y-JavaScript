@@ -54,9 +54,6 @@ if (isset($_POST['cerrar_sesion'])) {
           <li class="nav-item py-2 fs-5">
             <a href="ventas.php" class="nav-link text-white">Ventas</a>
           </li>
-          <li class="nav-item py-2 fs-5">
-            <a href="roles.php" class="nav-link text-white">Roles</a>
-          </li>
         </ul>
       </div>
 
@@ -65,6 +62,12 @@ if (isset($_POST['cerrar_sesion'])) {
         <h1>Módulo de Administración - Usuarios</h1>
       
       <section>
+        <h4>Insertar Registros con Archivo Excel</h4>
+        <form action="recibir_excel.php" method="POST" enctype="multipart/form-data">
+          <label for="archivo_excel">Seleccionar archivo Excel:</label>
+          <input class="form-control" style="width: 500px;" type="file" name="archivo_excel" id="archivo_excel" accept=".csv" required>
+          <button type="submit" class="btn btn-custom3 mt-2">Subir Excel</button>
+        </form>
         <div class="d-flex">
         <div class="mx-0 d-block mt-5">
                 <label class="ml-3 search" for="caja-busqueda">Buscar: </label>

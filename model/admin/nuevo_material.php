@@ -47,8 +47,8 @@
     </div>
 
     <script>
-        const formEnfermedad = document.getElementById('form-material');
-        formEnfermedad.addEventListener('submit', async function(event) {
+        const formMaterial = document.getElementById('form-material');
+        formMaterial.addEventListener('submit', async function(event) {
             event.preventDefault();
             const formData = new FormData();
             formData.append('id_material', document.getElementById('id_material').value);
@@ -63,7 +63,7 @@
                 
                 if(data.message){
                     alert(data.message);
-                    formEnfermedad.reset();
+                    formMaterial.reset();
                     window.close();
                 } else if(data.error){
                     alert('Error: ' + data.error);

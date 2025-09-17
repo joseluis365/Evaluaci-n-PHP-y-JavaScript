@@ -25,7 +25,7 @@ try {
 
             $sql = $pdo->prepare("INSERT INTO venta 
                 (doc_vendedor, doc_comprador, id_material, cantidad_venta, total) 
-                VALUES (?, ?, ?)");
+                VALUES (?, ?, ?, ?, ?)");
             $sql->execute([
                 $id_vendedor,
                 $id_comprador,
