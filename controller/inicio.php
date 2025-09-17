@@ -7,7 +7,7 @@ session_start();
 if ($_POST["ingresar"]) {
     $doc = $_POST["documento"]; 
     $contra = htmlentities(addslashes($_POST["password"]));   
-    $sql = $con ->prepare("SELECT * FROM pacientes WHERE doc = ?") ;
+    $sql = $con ->prepare("SELECT * FROM usuario WHERE doc = ?") ;
     $sql -> execute([$doc]);
     $fila = $sql -> fetch();
 
